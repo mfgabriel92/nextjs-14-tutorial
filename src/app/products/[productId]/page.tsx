@@ -1,13 +1,13 @@
 interface Params {
   params: {
-    id: number;
+    productId: number;
   };
 }
 
 export default function ProductDetails({ params }: Params) {
   return (
     <div className="flex items-center justify-center h-screen">
-      <h1 className="text-2xl">Product #{params.id} details</h1>
+      <h1 className="text-2xl">Product #{params.productId} details</h1>
     </div>
   );
 }
