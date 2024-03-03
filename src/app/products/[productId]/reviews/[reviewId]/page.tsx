@@ -1,11 +1,17 @@
+import { notFound } from "next/navigation";
+
 interface Params {
   params: {
-    productId: number;
-    reviewId: number;
+    productId: string;
+    reviewId: string;
   };
 }
 
 export default function ProductReviewDetails({ params }: Params) {
+  if (parseInt(params.reviewId) > 1000) {
+    notFound();
+  }
+
   return (
     <div className="flex items-center justify-center h-screen">
       <h1 className="text-2xl">
