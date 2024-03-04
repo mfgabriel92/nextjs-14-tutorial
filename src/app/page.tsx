@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <h1 className="text-2xl">Home</h1>
-      <Link href={`product/${productId}`}> Go to product {productId}</Link>
+      <Link href={`products/${productId}`}> Go to product {productId}</Link>
     </>
   );
 }
