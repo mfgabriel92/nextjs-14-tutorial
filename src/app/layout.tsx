@@ -5,7 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NextJS 14 tutorial",
+  title: {
+    default: "Title for child segments",
+    template: "%s | Next.js 14 tutorial",
+  },
 };
 
 export default function RootLayout({
