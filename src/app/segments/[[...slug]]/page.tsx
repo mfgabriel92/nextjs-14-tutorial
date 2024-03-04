@@ -6,7 +6,7 @@ interface Params {
 
 export default function OptionalSegments({ params }: Params) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <>
       <h1 className="text-2xl">Optional segments</h1>
       {params.slug?.map((s) => (
         <div
@@ -16,6 +16,6 @@ export default function OptionalSegments({ params }: Params) {
           <p className="text-xl">{s}</p>
         </div>
       ))}
-    </div>
+    </>
   );
 }
