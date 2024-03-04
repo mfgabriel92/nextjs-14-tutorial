@@ -25,7 +25,7 @@ export default function RootLayout({
         <header>
           <h1 className="text-2xl">Header</h1>
         </header>
-        <main className="flex flex-1 items-center justify-center">
+        <main className="flex flex-1 flex-col items-center justify-center">
           {children}
         </main>
         <footer>
