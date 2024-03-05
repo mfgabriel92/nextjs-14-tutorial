@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+// import { notFound } from "next/navigation";
 
 interface Params {
   params: {
@@ -8,9 +8,18 @@ interface Params {
 }
 
 export default function ProductReviewDetails({ params }: Params) {
-  if (parseInt(params.reviewId) > 1000) {
-    notFound();
+  function getRandomInt(count: number) {
+    return Math.floor(Math.random() * count);
   }
+
+  const n = getRandomInt(2);
+
+  if (n === 0) {
+    throw new Error("Error loading review");
+  }
+  // if (parseInt(params.reviewId) > n) {
+  //   notFound();
+  // }
 
   return (
     <h1 className="text-2xl">
