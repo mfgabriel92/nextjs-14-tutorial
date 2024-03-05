@@ -1,4 +1,5 @@
 // import { notFound } from "next/navigation";
+"use client"
 
 interface Params {
   params: {
