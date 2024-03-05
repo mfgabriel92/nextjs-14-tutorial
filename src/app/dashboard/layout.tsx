@@ -3,21 +3,30 @@ interface Props {
   notifications: React.ReactNode,
   revenue: React.ReactNode,
   users: React.ReactNode,
+  signin: React.ReactNode,
 }
 
-export default function Dashboard({ children, notifications, revenue, users }: Props) {
+export default function Dashboard({ children, notifications, revenue, users, signin }: Props) {
+  const isLoggedIn = false;
+
   return (
     <>
-      <div>{children}</div>
-      <div className="flex">
-        <div className="flex flex-col">
-          <div>{users}</div>
-          <div>{revenue}</div>
-        </div>
-        <div className="flex flex-1">
-          {notifications}
-        </div>
-      </div>
+      {isLoggedIn ? (
+        <>
+          <div>{children}</div>
+          <div className="flex">
+            <div className="flex flex-col">
+              <div>{users}</div>
+              <div>{revenue}</div>
+            </div>
+            <div className="flex flex-1">
+              {notifications}
+            </div>
+          </div>
+        </>
+      ) : (
+        signin
+      )}
     </>
   )
 }
